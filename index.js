@@ -173,6 +173,43 @@ async function run(){
             res.send(products);
         })
 
+        app.get('/b2bProducts/shoe',async(req,res)=>{
+            const query = {p_category:"shoe"};
+            const result = await b2bProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+        app.get('/b2bProducts/bag',async(req,res)=>{
+            const query = {p_category:"bag"};
+            const result = await b2bProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+        app.get('/b2bProducts/jacket',async(req,res)=>{
+            const query = {p_category:"jacket"};
+            const result = await b2bProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+        app.get('/b2cProducts/shoe',async(req,res)=>{
+            const query = {p_category:"shoe"};
+            const result = await b2cProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+        app.get('/b2cProducts/bag',async(req,res)=>{
+            const query = {p_category:"bag"};
+            const result = await b2cProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+        app.get('/b2cProducts/jacket',async(req,res)=>{
+            const query = {p_category:"jacket"};
+            const result = await b2cProductsCollection.find(query).toArray();
+            res.send(result);
+            
+        })
+
     }
     finally{
 
