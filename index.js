@@ -162,6 +162,16 @@ async function run(){
         })
 
         //get products
+        app.get('/b2bProducts',async(req, res)=>{
+            const query = {}
+            const products = await b2bProductsCollection.find(query).toArray();
+            res.send(products);
+        })
+        app.get('/b2cProducts',async(req, res)=>{
+            const query = {}
+            const products = await b2cProductsCollection.find(query).toArray();
+            res.send(products);
+        })
 
     }
     finally{
